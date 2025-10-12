@@ -6,10 +6,12 @@ import {
   Project,
   Contact,
   Navigation,
+  Educationaltiemeline,
   Footer,
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
+import Achievements from "./components/achievements";
 
 function App() {
     const [mode, setMode] = useState<string>('dark');
@@ -33,6 +35,8 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
+            <Educationaltiemeline/>
+            <Achievements/>
             <Project/>
             <Contact/>
         </FadeIn>

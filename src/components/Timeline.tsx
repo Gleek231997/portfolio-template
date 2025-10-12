@@ -10,57 +10,81 @@ function Timeline() {
   return (
     <div id="history">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>CAREER HISTORY</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="Jun 2024 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
-            <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
-            </p>
+            <h2 className="vertical-timeline-element-title">Data Science Researcher</h2>
+            <h3 className="vertical-timeline-element-subtitle">Rutgers University | New Brunswick, NJ.</h3>
+            <div className="timeline-details">
+              <ul>
+                <li>Deploy predictive models (XGBoost, Logistic Regression), improving career resource recommendations and
+                  boosting engagement by 25%.</li> 
+                <li>Automate Python ETL pipelines and optimized SQL workflows, cutting manual effort by 40%.</li>
+                <li>Conduct EDA on student engagement data, delivering insights for policy and program improvement.</li>
+                </ul>
+             </div>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="Jan 2024 – May 2024"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Data Science Co-op </h3>
+            <h4 className="vertical-timeline-element-subtitle">Merck & Rutgers Statistics Dept | New Brunswick, NJ.</h4>
+            <div className="timeline-details">
+            <ul>
+                <li>Applied conformal predictions on neural networks for reliable uncertainty estimation.</li> 
+                <li>Enhanced interpretability using SHAP values and Integrated Gradients.</li>
+                <li>Designed diagnostics (FDS plots, power curves) to improve experiment validity.</li>
+             </ul>
+             </div>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Sep 2021 – Dec 2023"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-            <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
-            </p>
+            <h4 className="vertical-timeline-element-subtitle">Accenture | Bangalore, India </h4>
+            <div className="timeline-details">
+            <ul>
+                <li>Conducted SQL-driven analysis and automated ETL workflows, supporting predictive models and BI dashboards.</li> 
+                <li>Collaborated on ML pipeline optimization, enabling scalable monthly data processing.</li>
+                <li>Developed and deployed REST APIs and web applications, enhancing data accessibility and reducing reporting turnaround time by 30%</li>
+                <li>Led a team of 3 junior engineers to deliver scalable applications, improving deployment efficiency by 15%.</li>
+             </ul>
+             </div>
+             
+
+
+
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="Jul 2019 – Aug 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
-            <p>
-              Full-stack Development, API Development, User Experience
-            </p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - 2020"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBriefcase} />}
-          >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
-            <p>
-              Automation, Data Governance, Statistical Analysis
-            </p>
+            <h3 className="vertical-timeline-element-title">Vital Axis Pvt Ltd </h3>
+            <h4 className="vertical-timeline-element-subtitle">TBangalore, India</h4>
+            <div className="timeline-details">
+            <ul>
+                <li>Delivered scalable healthcare applications by developing and deploying ASP.NET MVC frameworks with SQL Server and Entity Framework, supporting over 1,000 concurrent users with high availability.</li>
+                <li>Improved system throughput by refactoring SQL schema designs and implementing stored procedures and triggers, reducing database latency by 70% and increasing transaction capacity.</li>
+                <li>Worked in Agile sprints with cross-functional teams to implement client-requested Angular features, raising customer satisfaction scores by 20%.</li>
+                <li>Enhanced release stability by introducing automated unit testing with NUnit and Moq, reducing regression defects by 30%.</li>
+             </ul>
+             </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>

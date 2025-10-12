@@ -95,8 +95,8 @@
 
 
 /* Gradient Animation for Career History */
-#history h1 {
-  font-size: 4.5rem;
+#education h1 {
+  font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -151,7 +151,7 @@
 }
 
 /* style the date element as a hidden pill by default */
-.vertical-timeline-educ-element .vertical-timeline-educ-element-date {
+.vertical-timeline-element .vertical-timeline-element-date {
   display: inline-block !important;
   position: absolute !important;
   top: 8px;                 /* tune vertical offset */
@@ -190,8 +190,8 @@
 }
 
 /* also show when hovering the icon (in case users hover the marker) */
-.vertical-timeline-educ-element-icon:hover + .vertical-timeline-educ-element-date,
-.vertical-timeline-educ-element-icon:hover ~ .vertical-timeline-educ-element-date {
+.vertical-timeline-element-icon:hover + .vertical-timeline-element-date,
+.vertical-timeline-element-icon:hover ~ .vertical-timeline-element-date {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
