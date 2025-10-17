@@ -1,48 +1,60 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+@keyframes gradientMoveButton {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.contact-form {
-  padding-top: 20px;
+.contact_wrapper {
+  text-align: center;
+  padding: 20px;
 
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
   }
 
-  button:hover {
-    background-color:#9596a9, #c8b4e8, #26151d, #555662;
-    color: white;
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
   }
 
-  fieldset {
-    background-color: white;
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .contact-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+      /* 🔄 Change 1: Apply animated gradient to default state */
+      background: linear-gradient(90deg, #4f46e5, #7c3aed, #9333ea, #4f46e5); 
+      background-size: 400% 400%; /* Make the background large so it can shift */
+      animation: gradientMoveButton 12s ease infinite; 
+      
+      /* Optional: Use a default color if animation is disabled by user settings */
+      @media (prefers-reduced-motion: reduce) {
+        background: #4f46e5;
+        animation: none;
+      }
+
+      &:hover {
+        /* 🔄 Change 2: Enhance background on hover for visual pop */
+        background: linear-gradient(135deg, #a78bfa, #6366f1, #fb7185, #a78bfa);
+        background-size: 300% 300%;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(99, 102, 241, 0.4);
+        /* 🔄 Change 3: Speed up animation on hover for a subtle jitter/effect */
+        animation: gradientMoveButton 4s ease infinite; 
+      }
+    }
   }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
-
-form {
-  width: 100% !important;
-}
-
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
 }

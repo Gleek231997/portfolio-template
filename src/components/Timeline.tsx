@@ -12,6 +12,23 @@ function Timeline() {
       <div className="items-container">
         <h1>CAREER HISTORY</h1>
         <VerticalTimeline>
+           <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
+            contentArrowStyle={{ borderRight: '7px solid  white' }}
+            date="Jun 2024 - present"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h2 className="vertical-timeline-element-title">Research Assistant – Data Science</h2>
+            <h3 className="vertical-timeline-element-subtitle"> Abraira Lab, Rutgers Universit | New Brunswick, NJ.</h3>
+            <div className="timeline-details">
+              <ul>
+                <li>DApplied machine learning and data analytics to spinal cord injury research, assisting in behavioral data modeling and visualization.</li> 
+                <li>Automated data preprocessing pipelines and supported neural activity analysis to improve research efficiency and reproducibility.</li>
+                </ul>
+             </div>
+          </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
@@ -20,7 +37,7 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h2 className="vertical-timeline-element-title">Data Science Researcher</h2>
+            <h2 className="vertical-timeline-element-title">Data Researcher for Career Exploration Services</h2>
             <h3 className="vertical-timeline-element-subtitle">Rutgers University | New Brunswick, NJ.</h3>
             <div className="timeline-details">
               <ul>

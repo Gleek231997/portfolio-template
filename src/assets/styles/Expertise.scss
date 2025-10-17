@@ -1,15 +1,4 @@
-/* Expertise.scss */
 
-.skills-container {
-  padding: 5% 10%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-
-  svg {
-    color: white;
-  }
-}
 
 //* Keyframes for continuous gradient movement */
 @keyframes gradientMove {
@@ -41,141 +30,88 @@
 
 
 
-/* Skills grid layout - 2 columns with scroll snap */
+.skills-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    svg {
+        color: white;
+    }
+}
+  
 .skills-container .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 skill blocks side by side */
-  grid-gap: 50px;
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  height: 100vh;
-  scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
 }
-
+  
 .skills-container .skills-grid .skill {
-  scroll-snap-align: start;
-  height: 80vh;                     
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem 2rem;
-  opacity: 1;                 
-  transform: translateX(0);   
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 20px;            /* Rounded corners */
-  background-color: rgba(255, 255, 255, 0.05); /* subtle background (optional) */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);       /* subtle shadow */
+    align-items: center;
+    text-align: left;
 }
-
-/* Hover lift + shadow */
-.skills-container .skills-grid .skill:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* Chip styling */
+  
 .chip {
-  color: rgb(39, 40, 34) !important;
-  background-color: white !important;
-  font-size: 0.8rem !important;
-  height: 25px !important;
-
-  span {
-    font-family: 'Courier Prime', monospace;
-    color: rgb(39, 40, 34);
-  }
-
-  svg {
-    height: 15px !important;
-  }
+    color: rgb(39, 40, 34) !important;
+    background-color: white !important;
+    font-size: 0.8rem !important;
+    height: 25px !important;
+  
+    span {
+        font-family: 'Courier Prime', monospace;
+        color: rgb(39, 40, 34);
+    }
+  
+    svg {
+        height: 15px !important;
+    }
 }
 
 .flex-chips {
-  line-height: 2;
-  margin: 0.5;
+    line-height: 2;
+    margin: 0.5;
 
-  .chip-title {
-    color: white;
-    padding-right: 10px;
-  }
+    .chip-title {
+        color: white;
+        padding-right: 10px;
+    }
 }
 
 .flex-chips .MuiChip-root {
-  margin-right: 0.5em;
+    margin-right: 0.5em;
 }
 
 .flex-chips .MuiChip-outlined {
-  background-color: #e0e0e0;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    background-color: #e0e0e0;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
 .flex-chips .MuiChip-outlined span {
-  color: rgb(39, 40, 34);
+    color: rgb(39, 40, 34);
 }
 
-/* Gradient for skill titles */
-.gradient-heading {
-  font-size: 2.4rem;
-  font-weight: bold;
-  background: linear-gradient(270deg, #3a3835, #fdf6e3, #3a3835); /* default light */
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* keep this */
-  color: #3a3835; /* fallback for non-webkit browsers */
-  animation: gradientMoveLight 12s ease infinite;
-}
+@media screen {
+    @media (max-width: 768px) {
+        .skills-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    
+        .skills-container .skills-grid {
+            display: initial;
+        }
+        
+        .skills-container .skills-grid .skill {
+            padding-bottom: 5%;
+        }
+    }
 
-/* Light theme override */
-body[data-theme="light"] .gradient-heading,
-body[data-theme="light"] .skills-container h1 {
-  background: linear-gradient(270deg, #3a3835, #fdf6e3, #3a3835);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #3a3835; /* ensures text shows up if gradient fails */
-  animation: gradientMoveLight 12s ease infinite;
-}
-
-/* Dark theme override */
-body[data-theme="dark"] .gradient-heading,
-body[data-theme="dark"] .skills-container h1 {
-  background: linear-gradient(270deg, #ffffff, #b0b0b0, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #ffffff; /* ensures text shows up if gradient fails */
-  animation: gradientMoveDark 12s ease infinite;
-}
-
-@keyframes gradientMoveLight {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes gradientMoveDark {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Responsive design */
-@media screen and (max-width: 1024px) {
-  .skills-container .skills-grid {
-    grid-template-columns: 1fr;  /* stack vertically on tablets */
-  }
-
-  .skills-container .skills-grid .skill {
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 567px) {
-  .skills {
-    font-size: 12px;
-  }
-}
-
-/* Skill icons */
-.skills-container .skills-grid .skill svg {
-    font-size: 5rem; /* bigger icons */
-    margin-bottom: 1rem; /* optional spacing below icon */
+    @media (max-width: 567px) {
+        .skills {
+            font-size: 12px;
+        }
+    }
 }
